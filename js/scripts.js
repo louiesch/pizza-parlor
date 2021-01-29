@@ -1,17 +1,19 @@
 // business logic -------------------------
 
-function Pizza(size, toppings, price) {
+function Pizza(size) {
   this.size = size;
-  this.toppings = toppings;
-  this.price = 0;
+  this.toppings = [];
 }
 
-Pizza.prototype.pizzaPrice = function(size) {
+Pizza.prototype.modifyPrice = function() {
+  let price = 0;
   if (this.size === "small") {
-    this.price = 10
+    price += 10;
   } else if (this.size === "medium") {
-    this.price = 12
-  } else {
-    this.price = 15;
-  }
+    price += 12;
+  } else if (this.size === "large") {
+    price += 15;
+  } else {}
+
+  return price;
 }
