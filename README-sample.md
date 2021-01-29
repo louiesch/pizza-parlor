@@ -17,6 +17,13 @@ _{This is a detailed description of your application. Give as much detail as nee
 
 ## Specifications
 
+| Behavior | Input Example | Output Example |
+|----|----|-----|
+| Allow user to choose a size of pizza | click on "medium" | medium pizza |
+| Calculate cost of pizza size | click on "medium" | price = $12 |
+
+
+
 ## Setup/Installation Requirements
 
 * _This is a great place_
