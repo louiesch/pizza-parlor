@@ -3,20 +3,35 @@
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
+  this.price = 0;
 }
 
 Pizza.prototype.modifyPrice = function() {
-  let price = 0;
   if (this.size === "small") {
-    price += 10;
+    this.price += 10;
   } else if (this.size === "medium") {
-    price += 12;
+    this.price += 12;
   } else if (this.size === "large") {
-    price += 15;
-  } else {}
+    this.price += 15;
+  } else {};
 
-  return price;
-}
+  if(this.toppings.includes("pepperoni")) {
+    this.price += 1;
+  };
+  if(this.toppings.includes("canadian-bacon")) {
+    this.price += 1;
+  };
+  if(this.toppings.includes("olives")) {
+    this.price += 1;
+  };
+  if(this.toppings.includes("mushrooms")) {
+    this.price += 1;
+  };
+  if(this.toppings.includes("extra-cheese")) {
+    this.price += 1;
+  };
+  return this.price;
+};
 
 // user interface logic ---------------------
 $(document).ready(function() {
