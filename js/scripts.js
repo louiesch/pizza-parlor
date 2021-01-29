@@ -1,8 +1,8 @@
 // business logic -------------------------
 
-function Pizza(size) {
+function Pizza(size, toppings) {
   this.size = size;
-  this.toppings = [];
+  this.toppings = toppings;
 }
 
 Pizza.prototype.modifyPrice = function() {
@@ -17,3 +17,10 @@ Pizza.prototype.modifyPrice = function() {
 
   return price;
 }
+
+// user interface logic ---------------------
+$(document).ready(function() {
+  $("#form1").submit(function(event) {
+    event.preventDefault();
+  })
+})
