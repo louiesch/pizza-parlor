@@ -5,10 +5,6 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 
-Pizza.prototype.addTopping = function(topping) {
-  this.toppings.push(topping);
-}
-
 Pizza.prototype.modifyPrice = function() {
   let price = 10
   if (this.size === "small") {
@@ -42,9 +38,9 @@ Pizza.prototype.modifyPrice = function() {
   return price;
 };
 
-// Pizza.prototype.addToppings = function(topping) {
-//   this.toppings.push(topping);
-// }
+Pizza.prototype.addTopping = function(topping) {
+  this.inputToppings.push(topping);
+}
 
 // user interface logic ---------------------
 $(document).ready(function() {
@@ -57,8 +53,8 @@ $(document).ready(function() {
       let toppingsPicked = $(this).val();
       newPizza.addTopping(toppingsPicked);
     });
-    let finalPrice = newPizza.modifyPrice();
-    $(".pizza-price").text(finalPrice);
+    //let finalPrice = newPizza.modifyPrice();
+    $(".pizza-price").text(newPizza.modifyPrice());
     $("#output").show()
   });
 });

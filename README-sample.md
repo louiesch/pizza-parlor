@@ -1,15 +1,16 @@
-# _{Application Name}_
+# _Pizza Parlor_
 
-#### _{Brief description of application}_
+#### _Order a custom pizza!_
 
-#### By _**{List of contributors}**_
+#### By _**Louie Schoenknecht**_
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _HTML_
+* _CSS_
+* _JavaScript_
+* _Bootstrap_
+* _jQuery_
 
 ## Description
 
