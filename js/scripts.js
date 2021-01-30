@@ -5,6 +5,10 @@ function Pizza(size, toppings) {
   this.toppings = toppings;
 }
 
+Pizza.prototype.addTopping = function(topping) {
+  this.toppings.push(topping);
+}
+
 Pizza.prototype.modifyPrice = function() {
   let price = 10
   if (this.size === "small") {
@@ -47,8 +51,12 @@ $(document).ready(function() {
   $("#form1").submit(function(event) {
     event.preventDefault();
     let inputSize = $("input:radio[name=size]:checked").val();
-    let inputToppings = $("input:checkbox[name=toppings]:checked").val();
+    let inputToppings = [];
     let newPizza = new Pizza(inputSize, inputToppings);
+    $("input:checkbox[name=toppings]:checked").each(function() {
+      let toppingsPicked = $(this).val();
+      newPizza.addTopping(toppingsPicked);
+    });
     let finalPrice = newPizza.modifyPrice();
     $(".pizza-price").text(finalPrice);
     $("#output").show()
