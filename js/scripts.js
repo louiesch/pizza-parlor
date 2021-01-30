@@ -3,39 +3,54 @@
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
-  this.price = 0;
 }
 
 Pizza.prototype.modifyPrice = function() {
+  let price = 10
   if (this.size === "small") {
-    this.price += 10;
+    price += 0;
   } else if (this.size === "medium") {
-    this.price += 12;
+    price += 2;
   } else if (this.size === "large") {
-    this.price += 15;
+    price += 5;
   } else {};
 
-  if(this.toppings.includes("pepperoni")) {
-    this.price += 1;
+  if(this.toppings === "pepperoni") {
+    price += 1;
+  } else {
   };
-  if(this.toppings.includes("canadian-bacon")) {
-    this.price += 1;
+  if(this.toppings === "canadian-bacon") {
+    price += 1;
+  } else {
   };
-  if(this.toppings.includes("olives")) {
-    this.price += 1;
+  if(this.toppings === "olives") {
+    price += 1;
+  } else {
   };
-  if(this.toppings.includes("mushrooms")) {
-    this.price += 1;
+  if(this.toppings === "mushrooms") {
+    price += 1;
+  } else {
   };
-  if(this.toppings.includes("extra-cheese")) {
-    this.price += 1;
+  if(this.toppings === "extra-cheese") {
+    price += 1;
+  } else {
   };
-  return this.price;
+  return price;
 };
+
+// Pizza.prototype.addToppings = function(topping) {
+//   this.toppings.push(topping);
+// }
 
 // user interface logic ---------------------
 $(document).ready(function() {
   $("#form1").submit(function(event) {
     event.preventDefault();
-  })
-})
+    let inputSize = $("input:radio[name=size]:checked").val();
+    let inputToppings = $("input:checkbox[name=toppings]:checked").val();
+    let newPizza = new Pizza(inputSize, inputToppings);
+    let finalPrice = newPizza.modifyPrice();
+    $(".pizza-price").text(finalPrice);
+    $("#output").show()
+  });
+});
