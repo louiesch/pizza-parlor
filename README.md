@@ -41,7 +41,7 @@ _This page was created for my week 4 individual project at Epicodus. It utilizes
 ## License
 
 _[MIT](https://choosealicense.com/licenses/mit/)_
-_Copyright (c) 2021, Louie Schoenknecht
+_Copyright (c) 2021, Louie Schoenknecht_
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
