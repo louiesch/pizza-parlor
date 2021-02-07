@@ -15,7 +15,12 @@ Pizza.prototype.modifyPrice = function() {
     price += 5;
   } else {};
 
-  if(this.toppings === "pepperoni") {
+
+  //toppings.length for loop
+//if (this.toppings.length > 0)
+// for (i;)
+
+  if(this.toppings === "pepperoni") { //includes
     price += 1;
   } else {
   };
@@ -39,7 +44,7 @@ Pizza.prototype.modifyPrice = function() {
 };
 
 Pizza.prototype.addTopping = function(topping) {
-  this.inputToppings.push(topping);
+  this.toppings.push(topping);
 }
 
 // user interface logic ---------------------
