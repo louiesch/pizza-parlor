@@ -14,7 +14,7 @@
 
 ## Description
 
-_{This page was created for my week 4 individual project at Epicodus. It utilizes constructors and prototypes to let the user build and see the price of a custom pizza.}_
+_This page was created for my week 4 individual project at Epicodus. It utilizes constructors and prototypes to let the user build and see the price of a custom pizza._
 
 ## Specifications
 
@@ -36,7 +36,7 @@ _{This page was created for my week 4 individual project at Epicodus. It utilize
 
 ## Known Bugs
 
-* _Currently any selected toppings are not added to final price._
+* _No known bugs._
 
 ## License
 
