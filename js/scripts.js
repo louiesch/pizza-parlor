@@ -16,27 +16,24 @@ Pizza.prototype.modifyPrice = function() {
   } else {};
 
 
-  //toppings.length for loop
-//if (this.toppings.length > 0)
-// for (i;)
 
-  if(this.toppings === "pepperoni") { //includes
+  if(this.toppings.includes("pepperoni")) { //includes
     price += 1;
   } else {
   };
-  if(this.toppings === "canadian-bacon") {
+  if(this.toppings.includes("canadian-bacon")) {
     price += 1;
   } else {
   };
-  if(this.toppings === "olives") {
+  if(this.toppings.includes("olives")) {
     price += 1;
   } else {
   };
-  if(this.toppings === "mushrooms") {
+  if(this.toppings.includes("mushrooms")) {
     price += 1;
   } else {
   };
-  if(this.toppings === "extra-cheese") {
+  if(this.toppings.includes("extra-cheese")) {
     price += 1;
   } else {
   };
@@ -58,7 +55,6 @@ $(document).ready(function() {
       let toppingsPicked = $(this).val();
       newPizza.addTopping(toppingsPicked);
     });
-    //let finalPrice = newPizza.modifyPrice();
     $(".pizza-price").text(newPizza.modifyPrice());
     $("#output").show()
   });
