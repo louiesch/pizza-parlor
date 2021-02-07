@@ -20,6 +20,7 @@ _{This page was created for my week 4 individual project at Epicodus. It utilize
 
 | Behavior | Input Example | Output Example |
 |----|----|-----|
+| Create a "pizza" object using pizza constructor | expect new "pizza" object | to include size and toppings |
 | Allow user to choose a size of pizza | click on "medium" | medium pizza |
 | Calculate cost of pizza size | click on "medium" | price = $12 |
 | Allow user to choose a topping | click on "pepperoni" | pepperoni |
